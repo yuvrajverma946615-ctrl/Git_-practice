@@ -1,12 +1,12 @@
-// // // // // const promise = new Promise((resolve, reject) => {
-// // // // //   let success = true;
+ const promise = new Promise((resolve, reject) => {
+ let success = true;
 
-// // // // //   if (success) {
-// // // // //     resolve("task is completed");
-// // // // //   } else {
-// // // // //     reject("task is not completed");
-// // // // //   }
-// // // // // });
+ if (success) {
+    resolve("task is completed");
+  } else {
+     reject("task is not completed");
+  }
+});
 
 // // // // //  function app() {
 // // // // //   fetch('https://api.freeapi.app/api/v1/public/randomproducts/product/random')
@@ -56,24 +56,24 @@
 // // // // //    }
 // // // // //   }
 
-// // // //   function login (username, password,callback) {
-// // // //     setTimeout(() => {
-// // // //       if (username === "Yuvraj" && password === "123"){
+// // //   function login (username, password,callback) {
+// // //     setTimeout(() => {
+// // //       if (username === "Yuvraj" && password === "123"){
 
-// // // //         callback(null, "You got damm right");
-// // // //       } else{
+// // //         callback(null, "You got damm right");
+// // //       } else{
 
-// // // //         callback("You fu**d up ", null);
-// // // //       }
-// // // //     },3000);
-// // // //   }
-// // // //   login ("rohit", "456", (err, msg) => {
-// // // //     if (err) {
-// // // //       console.error(err);
-// // // //     } else {
-// // // //       console.log(msg);
-// // // //     }
-// // // //   });
+// // //         callback("You fu**d up ", null);
+// // //       }
+// // //     },3000);
+// // //   }
+// // //   login ("rohit", "456", (err, msg) => {
+// // //     if (err) {
+// // //       console.error(err);
+// // //     } else {
+// // //       console.log(msg);
+// // //     }
+// // //   });
 
 // // // function login(username, password, callback) {
 // // //   setTimeout(() => {
@@ -236,75 +236,75 @@
 //     })
 //     .catch((error) => {
 //       console.error("Error fetching data:", error);
-//
+// 
 
-function getUser(userId) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (userId === 2) {
-        resolve({
-          Name: "Yuvraj verma",
-          id: 2,
-          email: "yuvraj@example.com",
-        });
-      } else {
-        reject("user not found");
-      }
-    }, 2000);
-  });
-}
+// function getUser(userId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (userId === 2) {
+//         resolve({
+//           Name: "Yuvraj verma",
+//           id: 2,
+//           email: "yuvraj@example.com",
+//         });
+//       } else {
+//         reject("user not found");
+//       }
+//     }, 2000);
+//   });
+// }
 
-function getOrders(userId) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (userId === 2) {
-        resolve([
-          {
-            id: 102,
-            amount: 500,
-            product: "shoes",
-          },
-          {
-            id: 103,
-            amount: 1000,
-            product: "headphones",
-          },
-        ]);
+// function getOrders(userId) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (userId === 2) {
+//         resolve([
+//           {
+//             id: 102,
+//             amount: 500,
+//             product: "shoes",
+//           },
+//           {
+//             id: 103,
+//             amount: 1000,
+//             product: "headphones",
+//           },
+//         ]);
 
-      } else {
-        reject("user not found");
-      }
-    }, 1000);
-  });
-}
+//       } else {
+//         reject("user not found");
+//       }
+//     }, 1000);
+//   });
+// }
 
-function calculateTotal(orders) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (orders && orders.length > 0) {
-        const total = orders.reduce((sum, order) => sum + order.amount, 0);
-        resolve(total);
-      } else {
-        reject("no orders available");
-      }
-    }, 1000);
-  });
-}
+// function calculateTotal(orders) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (orders && orders.length > 0) {
+//         const total = orders.reduce((sum, order) => sum + order.amount, 0);
+//         resolve(total);
+//       } else {
+//         reject("no orders available");
+//       }
+//     }, 1000);
+//   });
+// }
 
-getUser(2)
-  .then((user) => {
-    console.log("user:", user);
-    return getOrders(user.id);
-  })
-  .then((order) => {
-    console.log("order:", order);
-    return calculateTotal(order);
-  })
-  .then((total) => {
-    console.log("total:", total);
-  })
-  .catch((error) => {
-    console.log("Error:", error);
-  });
+// getUser(2)
+//   .then((user) => {
+//     console.log("user:", user);
+//     return getOrders(user.id);
+//   })
+//   .then((order) => {
+//     console.log("order:", order);
+//     return calculateTotal(order);
+//   })
+//   .then((total) => {
+//     console.log("total:", total);
+//   })
+//   .catch((error) => {
+//     console.log("Error:", error);
+//   });
 
 
