@@ -1,10 +1,10 @@
-function PlaceOrder() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({ orderId: 101, item: "pizza" });
-    }, 1000);
-  });
-}
+// function PlaceOrder() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve({ orderId: 101, item: "pizza" });
+//     }, 1000);
+//   });
+// }
 
 // function prepareFood(orderId) {
 //     return new Promise((resolve, reject) => {
